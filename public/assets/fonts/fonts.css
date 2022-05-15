@@ -1,0 +1,26 @@
+@font-face {
+    font-family: Kusanagi;
+    src: url(./Kusanagi/Kusanagi.otf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(./Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Aceh;
+    src: url(./Aceh/Aceh-Light.ttf);
+}
+@font-face {
+    font-family: Israr-Syria;
+    src: url(./Israr-Syria/Israr-Syria.otf);
+}
+@font-face {
+    font-family: SwissraM;
+    src: url(./Swissra/Swissra_Light_Mobile.woff);
+}
+@font-face {
+    font-family: SwissraD;
+    src: url(./Swissra/Swissra_Medium_Desktop.woff);
+}

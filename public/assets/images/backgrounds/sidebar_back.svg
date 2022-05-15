@@ -1,0 +1,36 @@
+<svg width="234" height="710" viewBox="0 0 234 710" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clipPath="url(#clip0_72_2)">
+<g opacity="0.5" filter="url(#filter0_i_72_2)">
+<path opacity="0.5" d="M235 709.999H224.298H223.109L235 698.686V709.999Z" fill="white"/>
+</g>
+<path opacity="0.5" d="M101.406 9.64007H101.67L101.819 9.42257L107.747 0.763672H224.167H233.707V74.2355V694.384L217.287 709.501H-18.5436L-24.5 688.234V30.9073L-18.5436 9.64007H101.406Z" fill="white" fill-opacity="0.22" stroke="white"/>
+<g opacity="0.5" filter="url(#filter1_i_72_2)">
+<path opacity="0.5" d="M55.0605 -2H102.84L98.2039 4.9852H55.0605V-2Z" fill="white"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_i_72_2" x="223.109" y="698.686" width="11.8911" height="11.313" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="10"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_72_2"/>
+</filter>
+<filter id="filter1_i_72_2" x="55.0605" y="-2" width="47.7793" height="6.98535" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="10"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_72_2"/>
+</filter>
+<clipPath id="clip0_72_2">
+<rect width="234" height="710" fill="white"/>
+</clipPath>
+</defs>
+</svg>
