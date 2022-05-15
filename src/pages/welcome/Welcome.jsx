@@ -152,7 +152,7 @@ const WelcomeBodyContainer = styled.div`
     }
 `;
 const HeaderContainer = styled.div`
-    width: 100vw;
+    width: 100%;
     height: 110px;
     display: flex;
     align-items: flex-end;
@@ -194,9 +194,7 @@ export default function Welcome() {
                     abi,
                     signer
                 );
-                let totalTokenIds = await nftContract.walletOfOwner(
-                    account
-                );
+                let totalTokenIds = await nftContract.walletOfOwner(account);
                 let tempMintedNFT = [];
                 for (let i = 0; i < totalTokenIds.length; i++) {
                     tempMintedNFT.push(parseInt(totalTokenIds[i]));
@@ -248,7 +246,6 @@ export default function Welcome() {
     };
 
     const mintNftHandler = async () => {
-        setLoading(true);
         try {
             const { ethereum } = window;
 
@@ -273,19 +270,20 @@ export default function Welcome() {
                 } else {
                     nftTxn = await nftContract.mint();
                 }
+                setLoading(true);
                 console.log(nftTxn);
                 console.log("Mining... please wait");
                 await nftTxn.wait();
                 // console.log(nftTxn);
 
-                let totalTokenIds = await nftContract.walletOfOwner(
-                    currentAccount
-                );
-                let tempMintedNFT = [];
-                for (let i = 0; i < totalTokenIds.length; i++) {
-                    tempMintedNFT.push(parseInt(totalTokenIds[i]));
-                }
-                setMintedNFT(tempMintedNFT);
+                // let totalTokenIds = await nftContract.walletOfOwner(
+                //     currentAccount
+                // );
+                // let tempMintedNFT = [];
+                // for (let i = 0; i < totalTokenIds.length; i++) {
+                //     tempMintedNFT.push(parseInt(totalTokenIds[i]));
+                // }
+                // setMintedNFT(tempMintedNFT);
 
                 Swal.fire({
                     icon: "success",
@@ -338,8 +336,15 @@ export default function Welcome() {
                 <HeaderV3></HeaderV3>
             </HeaderContainer>
             <Container height={size.height}>
-                <div className={loading?'block':'hidden'}>
-                    <img src="assets/images/loading.gif" style={{width:'50px', marginTop:'80px', marginBottom:'-80px'}}></img>
+                <div className={loading ? "block" : "hidden"}>
+                    <img
+                        src="assets/images/loading.gif"
+                        style={{
+                            width: "50px",
+                            marginTop: "80px",
+                            marginBottom: "-80px",
+                        }}
+                    ></img>
                 </div>
                 <WelcomeBodyContainer>
                     <BodyContainer height={size.height}>
@@ -389,7 +394,7 @@ export default function Welcome() {
                     </BodyContainer>
                 </WelcomeBodyContainer>
             </Container>
-            <div style={{ minHeight: "90vh", backgroundColor: "black" }}>
+            {/* <div style={{ minHeight: "90vh", backgroundColor: "black" }}>
                 <div style={{ marginLeft: "8vw", marginTop: "10vh", marginBottom:'5vh' }}>
                     <TextDecorator
                         uppercase="none"
@@ -406,62 +411,8 @@ export default function Welcome() {
                         }
                     ></TextDecorator>
                 </div>
-                <div style={{padding:'3%'}}>
-                <ResponsiveMasonry
-                    columnsCountBreakPoints={{
-                        400: 1,
-                        800: 2,
-                        1200: 3,
-                        1400: 4,
-                    }}
-                >
-                    <Masonry>
-                        {mintedNFT.map(function (i) {
-                            return (
-                                <div
-                                    className="profile-card-4 text-center"
-                                    // style={{
-                                    //     border:
-                                    //         selectedNFT[i] === true
-                                    //             ? "10px solid green"
-                                    //             : "10px solid white",
-                                    // }}
-                                    // onClick={(e) => clickNFT(e, i)}
-                                    key={i}
-                                >
-                                    <img
-                                        alt=""
-                                        src={`https://ipfs.io/ipfs/QmRQAVW68qLYn1gVPuecXdTbgiDWhjkBsTgJmZaaFBVsbL/${i}.png`}
-                                        style={{ width: "330px" }}
-                                        className="img img-responsive"
-                                    />
-                                    <div className="profile-content">
-                                        <div className="profile-description">
-                                            <p
-                                                style={{
-                                                    fontFamily: "cursive",
-                                                    fontWeight: "bold",
-                                                }}
-                                            >
-                                                PoolData #{i}
-                                            </p>
-                                            <p
-                                                style={{
-                                                    fontFamily: "cursive",
-                                                    fontSize: "18px",
-                                                }}
-                                            >
-                                                0.025 ETH
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </Masonry>
-                </ResponsiveMasonry>
-                </div>
-            </div>
+                
+            </div> */}
         </>
     );
 }

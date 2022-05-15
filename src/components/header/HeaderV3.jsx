@@ -181,14 +181,9 @@ const HeaderContainer = styled.div`
     justify-content: center;
     position: absolute;
     top: 30px;
-    width: calc(100vw - 120px);
-    max-width: 1800px;
+    width:100%!important;
     height: fit-content;
     align-items: center;
-    @media (max-width: 768px) {
-        width: calc(100vw - 48px);
-        top: 16px;
-    }
 `
 
 function HeaderV3({ setActiveIndex }) {
@@ -218,7 +213,7 @@ function HeaderV3({ setActiveIndex }) {
           </svg>
           <HeaderButtonV2 content='home' callback={homeButtonHandler}></HeaderButtonV2>
           {/* <HeaderButtonV2 content='launchpad' callback={homeButtonHandler}></HeaderButtonV2> */}
-          {/* <HeaderButtonV2 content='launchpad' callback={() => navigate('/launchpad')}></HeaderButtonV2> */}
+          <HeaderButtonV2 content='MY NFTS' callback={() => navigate('/nfts')}></HeaderButtonV2>
           <HeaderLeftLineDown src="assets/images/header/leftline.png"></HeaderLeftLineDown>
         </HeaderLeftContainer>
       </div>
